@@ -1,0 +1,39 @@
+Name:           landscape
+Version:        0.0.0.1
+Build-Type:     Simple
+Cabal-Version:  >=1.6
+Stability:      experimental
+
+Executable landscape
+  Main-is: Main.hs
+  Build-Depends: 
+        base,
+        GLUT,
+        vector,
+        random,
+        OpenGL,
+        OpenGLRaw
+
+  Other-modules: Generator
+    RenderStrip
+    RenderUtils
+    RenderRaw
+    Draw
+        
+  GHC-options:
+        -Wall
+        -fno-warn-orphans
+        -threaded
+        -O2
+
+  Extensions:
+        ExistentialQuantification
+        FlexibleContexts
+        FunctionalDependencies
+        KindSignatures
+        MultiParamTypeClasses
+        PatternGuards
+        RankNTypes
+        ScopedTypeVariables
+
+
