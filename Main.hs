@@ -60,6 +60,7 @@ draw state = do
       t0 state $= t
       frames state $= 0
 
+
 idle :: State -> IdleCallback
 idle state = do
    angle' state $~! (+2)

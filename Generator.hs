@@ -40,8 +40,8 @@ heightmap_sinerot :: (Float,Float) -> Result
 heightmap_sinerot (!x,!y)
  = (height,veg,rock)
  where
-  veg = lerpy 0.6 1 1
-  rock = lerpy 0.4 2 1
+  veg = lerpy 0.6 1 1 + lerpy 0.3 2 0.3 + lerpy 0.1 3 0.2
+  rock = lerpy 0.4 2 1 + lerpy 0.3 3 0.8
 
   lerpy si off so = (lerp2 noise (x*si + off) (y*si + off)) * so
   mag = (lerpy 10 10 0.2 * rock) + (lerpy 05 05 0.4 * (1 - veg)) + lerpy 01 01 1.2 + lerpy 0.2 0.2 1.5
